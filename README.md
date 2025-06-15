@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/Download-111?logo=Visual-Studio-Code&style=for-the-badge)](https://github.com/nyc-nahid/bootstrapoptimization/releases)
+[![](https://img.shields.io/badge/Download-111?logo=Visual-Studio-Code&style=for-the-badge)](https://github.com/nyc-nahid/bootstrap-optimization/releases)
 
 ## Optimization for Bootstrap
 Additional addons to help bootstrap to flow smoothly and increasing website speed, while supporting dark and light mode.<br>
