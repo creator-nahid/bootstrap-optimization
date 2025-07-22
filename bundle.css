@@ -1,73 +1,49 @@
 @charset "UTF-8";
 
+/* --- Variables --- */
 :root {
-	--lightgreen: #00ff7b;
+	/* Colors */
+	--green-light: #00ff7b;
 	--green: #2bbd50;
-	--darkgreen: #1e5534;
-	--lightyellow: #f2ff00;
+	--green-dark: #1e5534;
+	--yellow-light: #f2ff00;
 	--yellow: #ffcd32;
-	--darkyellow: #ecb228;
-	--lightred: #ff4d33;
+	--yellow-dark: #ecb228;
+	--red-light: #ff4d33;
 	--red: #eb0000;
-	--darkred: #c91a00;
-	--success #2d69f6;
+	--red-dark: #c91a00;
+	--blue-light: #4998f5;
+	--blue: #5461ff;
+	--blue-dark: #2f3dda;
+
+	/* Status Colors */
+	--success: #2d69f6;
 	--warning: #acacac;
 	--error: #b41b1b;
-	--lightblue: #4998f5;
-	--blue: #5461ff;
-	--darkblue: #2f3dda;
-	--font-default: "Font Name", type;
+
+	/* Typography */
+	--font-default: "Font Name", sans-serif;
 }
 
-textarea:focus,
-input:focus {
-	outline: none !important;
-}
-
-html {
-	width: 100% !important;
-}
-
+/* --- Base & Body Styles --- */
 body {
-	width: 100% !important;
 	position: relative;
 	background-color: white;
-	font-family: "Font Name",
-		type;
-	overflow-x: hidden;
+	font-family: var(--font-default);
 	font-optical-sizing: auto;
-	top: 0px !important;
+	overflow-x: hidden;
+	margin: 0;
 }
 
-@media (min-width: 1800px) {
-	.body {
-		width: 80% !important;
-		margin-left: auto;
-		margin-right: auto;
-	}
+/* --- Accessibility & Form Styles --- */
+/* Provide a clear visual indicator for focus, instead of removing it. */
+textarea:focus,
+input:focus {
+	outline: 2px solid var(--blue);
+	outline-offset: 2px;
 }
 
-@media (min-width: 2100px) {
-	.body {
-		width: 80% !important;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-@media (min-width: 2300px) {
-	.body {
-		width: 79% !important;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.body {
-	overflow-x: hidden !important;
-	max-width: 100% !important;
-}
-
+/* --- Utility Classes --- */
 .all-uppercase {
 	text-transform: uppercase;
 }
@@ -81,9 +57,7 @@ body {
 }
 
 .no-select {
-	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -91,70 +65,4 @@ body {
 
 .animation-paused {
 	animation-play-state: paused !important;
-	-webkit-animation-play-state: paused !important;
-	-moz-animation-play-state: paused !important;
-}
-
-@-moz-keyframes spin {
-	50% {
-		-moz-transform: rotate(10deg);
-	}
-
-	100% {
-		-moz-transform: rotate(0deg);
-	}
-}
-
-@-webkit-keyframes spin {
-	50% {
-		-webkit-transform: rotate(10deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(0deg);
-	}
-}
-
-@keyframes spin {
-	50% {
-		-webkit-transform: rotate(10deg);
-		transform: rotate(10deg);
-	}
-
-	100% {
-		-webkit-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-}
-
-@-moz-keyframes scale {
-	50% {
-		-moz-transform: scale(0.9);
-	}
-
-	100% {
-		-moz-transform: scale(1);
-	}
-}
-
-@-webkit-keyframes scale {
-	50% {
-		-webkit-transform: scale(0.9);
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	}
-}
-
-@keyframes scale {
-	50% {
-		-webkit-transform: scale(0.9);
-		transform: scale(0.8);
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
 }
